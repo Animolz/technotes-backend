@@ -1,3 +1,3 @@
-const allowedOrigins = ["https://technotes-hxyb.onrender.com/"];
+const allowedOrigins = [process.env.CLIENT_ENVIRONMENT];
 
 module.exports = allowedOrigins;
