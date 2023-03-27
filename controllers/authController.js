@@ -7,14 +7,14 @@ const asyncHandler = require("express-async-handler");
 const createAccessToken = (data, options) => {
   return jwt.sign(data, process.env.ACCESS_TOKEN_SECRET, {
     ...options,
-    expiresIn: "5s",
+    expiresIn: "5m",
   });
 };
 
 const createRefreshToken = (data, options) => {
   return jwt.sign(data, process.env.REFRESH_TOKEN_SECRET, {
     ...options,
-    expiresIn: "10s",
+    expiresIn: "1d",
   });
 };
 
